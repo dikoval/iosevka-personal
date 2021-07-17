@@ -20,7 +20,7 @@ VOLUME /Iosevka/dist/
 USER aur
 
 # prepare Iosevka development setup
-ARG IOSEVKA_VERSION=v5.0.4
+ARG IOSEVKA_VERSION=v7.3.0
 RUN curl --location https://github.com/be5invis/Iosevka/archive/${IOSEVKA_VERSION}.tar.gz --output /tmp/iosevka.tar.gz   \
  && tar --extract --file /tmp/iosevka.tar.gz --strip-components 1                                                        \
  && rm -rf /tmp/iosevka.tar.gz                                                                                           \
