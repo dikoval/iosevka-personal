@@ -1,0 +1,87 @@
+# Created using https://typeof.net/Iosevka/customizer
+[buildPlans.iosevka-personal]
+family = "Iosevka Personal"
+spacing = "fixed"
+serifs = "sans"
+
+[buildPlans.iosevka-personal.variants.design]
+capital-a = "curly"
+capital-b = "standard"
+capital-f = "standard"
+capital-g = "toothed-serifless-hooked"
+capital-i = "short-serifed"
+capital-j = "serifed"
+capital-l = "standard"
+capital-q = "curly-tailed"
+capital-r = "curly"
+capital-v = "straight"
+capital-w = "curly"
+capital-x = "curly"
+capital-y = "curly"
+
+a = "double-storey"
+f = "serifless"
+g = "double-storey"
+i = "hooky"
+j = "serifed"
+k = "straight"
+l = "serifed-tailed"
+m = "short-leg"
+r = "serifless"
+t = "standard"
+u = "toothed"
+v = "curly"
+w = "curly"
+x = "curly"
+y = "curly"
+
+eszet = "sulzbacher"
+turn-v = "curly"
+capital-gamma = "motion-serifed"
+zero = "slashed"
+one = "base"
+two = "curly-neck"
+three = "flattop"
+four = "closed"
+five = "vertical-upper-left-bar"
+six = "straight-bar"
+seven = "straight-serifed"
+eight = "crossing"
+nine = "straight-bar"
+tilde = "low"
+asterisk = "low"
+underscore = "high"
+paragraph-sign = "high"
+caret = "high"
+paren = "normal"
+brace = "straight"
+number-sign = "slanted"
+ampersand = "closed"
+at = "threefold"
+dollar = "through"
+cent = "through"
+percent = "dots"
+bar = "natural-slope"
+lig-ltgteq = "slanted"
+ascii-single-quote = "straight"
+ascii-grave = "straight"
+question = "smooth"
+
+[buildPlans.iosevka-personal.variants.italic]
+a = "single-storey"
+f = "tailed"
+g = "single-storey"
+i = "serifed-flat-tailed"
+l = "serifed-tailed"
+r = "top-serifed"
+y = "cursive"
+
+[buildPlans.iosevka-personal.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-personal.weights.bold]
+shape = 700
+menu = 700
+css = 700
