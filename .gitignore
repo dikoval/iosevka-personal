@@ -1,0 +1,2 @@
+# ignore resulting build artifacts
+build/
