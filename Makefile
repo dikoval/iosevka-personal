@@ -1,6 +1,6 @@
 DESTDIR = ~/.local/share/fonts
 
-IOSEVKA_VERSION = v10.0.0
+IOSEVKA_VERSION = v10.3.1
 IOSEVKA_BUILD_PLAN = 'ttf::iosevka-personal'
 
 # colors
