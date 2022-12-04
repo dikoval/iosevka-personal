@@ -1,6 +1,6 @@
 DESTDIR = ~/.local/share/fonts
 
-IOSEVKA_VERSION = v10.3.1
+IOSEVKA_VERSION = v16.6.0
 IOSEVKA_BUILD_PLAN = 'ttf::iosevka-personal'
 
 # colors
@@ -13,7 +13,7 @@ build: Dockerfile private-build-plans.toml
 	@echo "$(GREEN)>>> Building Iosevka Builder docker image...$(RESET)"
 	@docker build --build-arg IOSEVKA_VERSION=$(IOSEVKA_VERSION) --tag iosevka-builder:$(IOSEVKA_VERSION) .
 	@mkdir -p build/ # host directory is created by Docker with root owner if absent
-	@docker run --rm --user $(shell id -u):$(shell id -g) -v $(shell pwd)/build:/Iosevka/dist iosevka-builder:$(IOSEVKA_VERSION) $(IOSEVKA_BUILD_PLAN)
+	@docker run --rm --user $(shell id -u):$(shell id -g) -v $(shell pwd)/build:/home/yay/Iosevka/dist iosevka-builder:$(IOSEVKA_VERSION) $(IOSEVKA_BUILD_PLAN)
 
 install: build
 	@echo "$(GREEN)>>> Installing font to user HOME directory...$(RESET)"

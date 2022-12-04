@@ -4,6 +4,7 @@ family = "Iosevka Personal"
 spacing = "fixed"
 serifs = "sans"
 no-cv-ss = true
+no-ligation = true
 
 [buildPlans.iosevka-personal.variants.design]
 capital-a = "curly-serifless"
