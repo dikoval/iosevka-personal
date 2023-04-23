@@ -16,7 +16,7 @@ WORKDIR /home/yay/Iosevka/
 VOLUME /home/yay/Iosevka/dist/
 
 # prepare Iosevka development setup
-ARG IOSEVKA_VERSION=v16.6.0
+ARG IOSEVKA_VERSION=v22.1.0
 RUN curl --location https://github.com/be5invis/Iosevka/archive/${IOSEVKA_VERSION}.tar.gz --output /tmp/iosevka.tar.gz   \
  && tar --extract --file /tmp/iosevka.tar.gz --strip-components 1                                                        \
  && rm -rf /tmp/iosevka.tar.gz                                                                                           \
