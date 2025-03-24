@@ -3,8 +3,9 @@
 family = "Iosevka Personal"
 spacing = "fixed"
 serifs = "sans"
-no-cv-ss = true
-no-ligation = true
+noCvSS = true
+noLigation = true
+exportGlyphNames = false
 
 [buildPlans.iosevka-personal.variants.design]
 capital-a = "curly-serifless"
@@ -12,40 +13,37 @@ capital-g = "toothed-serifless-hooked"
 capital-i = "short-serifed"
 capital-j = "serifed-symmetric"
 capital-q = "curly-tailed"
-capital-r = "curly"
-capital-v = "curly"
-capital-w = "curly"
+capital-r = "curly-serifless"
+capital-v = "curly-serifless"
+capital-w = "curly-serifless"
 capital-x = "curly-serifless"
 capital-y = "curly-serifless"
+capital-z = "curly-serifless"
 
 g = "double-storey"
 i = "hooky"
 j = "serifed"
 l = "tailed-serifed"
-m = "short-leg"
-v = "curly"
-w = "curly"
+v = "curly-serifless"
+w = "curly-serifless"
 x = "curly-serifless"
-y = "curly"
-turn-v = "curly"
+y = "curly-serifless"
 
 zero = "slashed"
 one = "base"
-two = "curly-neck"
-three = "flat-top"
-four = "closed"
+three = "flat-top-serifless"
+four = "semi-open-non-crossing-serifless"
 six = "straight-bar"
-seven = "straight-serifed"
+seven = "straight-serifless"
 nine = "straight-bar"
 
 tilde = "low"
 asterisk = "penta-low"
 underscore = "high"
-caret = "high"
+caret = "medium"
 brace = "straight"
-number-sign = "slanted"
+number-sign = "upright"
 percent = "dots"
-lig-ltgteq = "slanted"
 
 [buildPlans.iosevka-personal.variants.italic]
 a = "single-storey-serifless"
@@ -54,14 +52,19 @@ i = "tailed-serifed"
 k = "straight-serifless"
 l = "tailed-serifed"
 r = "top-serifed"
-y = "cursive"
 
-[buildPlans.iosevka-personal.weights.regular]
+[buildPlans.iosevka-personal.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
-[buildPlans.iosevka-personal.weights.bold]
+[buildPlans.iosevka-personal.weights.Bold]
 shape = 700
 menu = 700
 css = 700
+
+# build only normal width
+[buildPlans.iosevka-personal.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
