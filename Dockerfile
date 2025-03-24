@@ -1,32 +1,32 @@
-# This Dockerfile ignores some best practices in favor of readability and simplicity of individual components update
-FROM dasbaumwolltier/archlinux-yay
+# this Dockerfile ignores some best practices in favor of readability and simplicity of individual components update
+FROM node:lts-slim
 
-# base image is switching to YAY user as last command
+# required dependencies: git & ttfautohint
+RUN <<EOF
+  apt-get update
+  apt-get install --no-install-recommends -y git ttfautohint ca-certificates
+  apt-get clean
+EOF
 
-# Required dependencies: nodejs & ttfautohint
-# ttfautohint has missing GPG key, so skipping verification for it
-RUN sudo pacman -Suy --noconfirm curl nodejs-lts-hydrogen npm                                        \
- && yay -S --noconfirm --nopgpfetch --mflags "--skippgpcheck" --cleanafter --removemake ttfautohint  \
- && sudo pacman -S --clean --clean
+# download Iosevka src code and setup work env
+ARG IOSEVKA_VERSION=main
+RUN <<EOF
+  git clone --depth=1 --branch ${IOSEVKA_VERSION} https://github.com/be5invis/Iosevka.git
 
-# create build directory
-# set 777 to build directory to allow "others" (eg, users from host system) full access to it
-RUN mkdir -p /home/yay/Iosevka/dist/
-WORKDIR /home/yay/Iosevka/
-VOLUME /home/yay/Iosevka/dist/
+  # install build dependencies
+  cd Iosevka && npm install --no-audit
 
-# prepare Iosevka development setup
-ARG IOSEVKA_VERSION=v22.1.0
-RUN curl --location https://github.com/be5invis/Iosevka/archive/${IOSEVKA_VERSION}.tar.gz --output /tmp/iosevka.tar.gz   \
- && tar --extract --file /tmp/iosevka.tar.gz --strip-components 1                                                        \
- && rm -rf /tmp/iosevka.tar.gz                                                                                           \
- && npm install --no-audit
+  # grant full access to Iosevka dir to be able to build font by any user
+  chmod --recursive 777 /Iosevka
+EOF
+
+# setup work and result directories
+WORKDIR /Iosevka
+VOLUME  /Iosevka/dist/
 
 # copy custom build plan to current directory
-# grant full access to Iosevka dir to be able to build font by any user
-COPY --chown=yay:users private-build-plans.toml .
-RUN sudo chmod --recursive 777 /home/yay/Iosevka
+COPY private-build-plans.toml .
 
 # build Iosevka distribution on run
-ENTRYPOINT ["npm", "run", "build"]
+ENTRYPOINT ["npm", "run", "build", "--"]
 CMD ["ttf::iosevka-personal"]
