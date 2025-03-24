@@ -1,5 +1,5 @@
 # Created using https://typeof.net/Iosevka/customizer
-[buildPlans.iosevka-personal]
+[buildPlans.IosevkaPersonal]
 family = "Iosevka Personal"
 spacing = "fixed"
 serifs = "sans"
@@ -7,7 +7,7 @@ noCvSS = true
 noLigation = true
 exportGlyphNames = false
 
-[buildPlans.iosevka-personal.variants.design]
+[buildPlans.IosevkaPersonal.variants.design]
 capital-a = "curly-serifless"
 capital-g = "toothed-serifless-hooked"
 capital-i = "short-serifed"
@@ -45,7 +45,7 @@ brace = "straight"
 number-sign = "upright"
 percent = "dots"
 
-[buildPlans.iosevka-personal.variants.italic]
+[buildPlans.IosevkaPersonal.variants.italic]
 a = "single-storey-serifless"
 g = "single-storey-serifless"
 i = "tailed-serifed"
@@ -53,18 +53,18 @@ k = "straight-serifless"
 l = "tailed-serifed"
 r = "top-serifed"
 
-[buildPlans.iosevka-personal.weights.Regular]
+[buildPlans.IosevkaPersonal.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
-[buildPlans.iosevka-personal.weights.Bold]
+[buildPlans.IosevkaPersonal.weights.Bold]
 shape = 700
 menu = 700
 css = 700
 
 # build only normal width
-[buildPlans.iosevka-personal.widths.Normal]
+[buildPlans.IosevkaPersonal.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"

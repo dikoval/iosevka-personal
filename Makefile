@@ -1,7 +1,7 @@
 DESTDIR = ~/.local/share/fonts
 
 IOSEVKA_VERSION = v33.1.0
-IOSEVKA_BUILD_PLAN = 'ttf::iosevka-personal'
+IOSEVKA_BUILD_PLAN = 'ttf::IosevkaPersonal'
 
 # colors
 GREEN := $(shell tput setaf 2)
@@ -20,13 +20,13 @@ build: Dockerfile private-build-plans.toml
 
 install: build
 	@echo "$(GREEN)>>> Installing font to user HOME directory...$(RESET)"
-	@mkdir -p $(DESTDIR)/Iosevka-Personal/
-	@cp --recursive --update build/iosevka-personal/ttf/* $(DESTDIR)/Iosevka-Personal/
+	@mkdir -p $(DESTDIR)/iosevka-personal/
+	@cp --recursive --update build/IosevkaPersonal/TTF/* $(DESTDIR)/iosevka-personal/
 	@fc-cache --force --verbose $(DESTDIR)
 
 uninstall:
 	@echo "$(GREEN)>>> Uninstalling theme from user HOME directory...$(RESET)"
-	rm --interactive=once --recursive $(DESTDIR)/Iosevka-Personal
+	rm --interactive=once --recursive $(DESTDIR)/iosevka-personal
 	@fc-cache --force
 
 clean:

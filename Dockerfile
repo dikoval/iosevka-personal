@@ -29,4 +29,4 @@ COPY private-build-plans.toml .
 
 # build Iosevka distribution on run
 ENTRYPOINT ["npm", "run", "build", "--"]
-CMD ["ttf::iosevka-personal"]
+CMD ["ttf::IosevkaPersonal"]
