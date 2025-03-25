@@ -9,10 +9,7 @@ exportGlyphNames = false
 
 [buildPlans.IosevkaPersonal.variants.design]
 capital-a = "curly-serifless"
-capital-g = "toothed-serifless-hooked"
 capital-i = "short-serifed"
-capital-j = "serifed-symmetric"
-capital-q = "curly-tailed"
 capital-r = "curly-serifless"
 capital-v = "curly-serifless"
 capital-w = "curly-serifless"
@@ -22,27 +19,18 @@ capital-z = "curly-serifless"
 
 g = "double-storey"
 i = "hooky"
-j = "serifed"
 l = "tailed-serifed"
 v = "curly-serifless"
 w = "curly-serifless"
 x = "curly-serifless"
 y = "curly-serifless"
 
-zero = "slashed"
 one = "base"
 three = "flat-top-serifless"
 four = "semi-open-non-crossing-serifless"
-six = "straight-bar"
-seven = "straight-serifless"
-nine = "straight-bar"
 
-tilde = "low"
 asterisk = "penta-low"
-underscore = "high"
-caret = "medium"
 brace = "straight"
-number-sign = "upright"
 percent = "dots"
 
 [buildPlans.IosevkaPersonal.variants.italic]
@@ -50,8 +38,6 @@ a = "single-storey-serifless"
 g = "single-storey-serifless"
 i = "tailed-serifed"
 k = "straight-serifless"
-l = "tailed-serifed"
-r = "top-serifed"
 
 [buildPlans.IosevkaPersonal.weights.Regular]
 shape = 400
