@@ -8,22 +8,11 @@ noLigation = true
 exportGlyphNames = false
 
 [buildPlans.IosevkaPersonal.variants.design]
-capital-a = "curly-serifless"
 capital-i = "short-serifed"
-capital-r = "curly-serifless"
-capital-v = "curly-serifless"
-capital-w = "curly-serifless"
-capital-x = "curly-serifless"
-capital-y = "curly-serifless"
-capital-z = "curly-serifless"
 
 g = "double-storey"
 i = "hooky"
 l = "tailed-serifed"
-v = "curly-serifless"
-w = "curly-serifless"
-x = "curly-serifless"
-y = "curly-serifless"
 
 one = "base"
 three = "flat-top-serifless"
