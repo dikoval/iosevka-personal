@@ -10,23 +10,19 @@ exportGlyphNames = false
 [buildPlans.IosevkaPersonal.variants.design]
 capital-i = "short-serifed"
 
-g = "double-storey"
 i = "hooky"
-l = "tailed-serifed"
+l = "zshaped"
 
-one = "base"
 three = "flat-top-serifless"
-four = "semi-open-non-crossing-serifless"
 
 asterisk = "penta-low"
 brace = "straight"
 percent = "dots"
 
 [buildPlans.IosevkaPersonal.variants.italic]
-a = "single-storey-serifless"
-g = "single-storey-serifless"
 i = "tailed-serifed"
 k = "straight-serifless"
+l = "tailed-serifed"
 
 [buildPlans.IosevkaPersonal.weights.Regular]
 shape = 400
