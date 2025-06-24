@@ -1,7 +1,7 @@
 BUILD_DIR = build/IosevkaPersonal/TTF/
 INSTALL_DIR = ~/.local/share/fonts/iosevka-personal/
 
-IOSEVKA_VERSION = v33.2.4
+IOSEVKA_VERSION = v33.2.5
 IOSEVKA_BUILD_PLAN = 'ttf::IosevkaPersonal'
 
 # colors
