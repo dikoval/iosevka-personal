@@ -1,32 +1,20 @@
 # this Dockerfile ignores some best practices in favor of readability and simplicity of individual components update
 FROM node:lts-slim
 
-# required dependencies: git & ttfautohint
+# required dependencies: git, make & ttfautohint
 RUN <<EOF
   apt-get update
-  apt-get install --no-install-recommends -y git ttfautohint ca-certificates
+  apt-get install --no-install-recommends -y git make ttfautohint ca-certificates
   apt-get clean
 EOF
 
-# download Iosevka src code and setup work env
-ARG IOSEVKA_VERSION=main
-RUN <<EOF
-  git clone --depth=1 --branch ${IOSEVKA_VERSION} https://github.com/be5invis/Iosevka.git
-
-  # install build dependencies
-  cd Iosevka && npm install --no-audit
-
-  # grant full access to Iosevka dir to be able to build font by any user
-  chmod --recursive 777 /Iosevka
-EOF
-
-# setup work and result directories
-WORKDIR /Iosevka
-VOLUME  /Iosevka/dist/
+# create workdir and make sure, that it is writable by all users (eg, host user)
+RUN mkdir -p /iosevka-personal && chmod 777 /iosevka-personal
+WORKDIR /iosevka-personal
 
 # copy custom build plan to current directory
-COPY private-build-plans.toml .
+COPY Makefile private-build-plans.toml .
 
 # build Iosevka distribution on run
-ENTRYPOINT ["npm", "run", "build", "--"]
-CMD ["ttf::IosevkaPersonal"]
+ENTRYPOINT ["make"]
+CMD ["--always-make", "build"]
