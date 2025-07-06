@@ -1,0 +1,29 @@
+---
+name: "Build project"
+
+on:
+  # trigger workflow on push or manually
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v4"
+
+      - name: "Install dependencies"
+        shell: "bash"
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y git make ttfautohint ca-certificates
+
+      - name: "Build"
+        run: "make build"
+
+      - uses: "actions/upload-artifact@v4"
+        with:
+          name: "iosevka-personal"
+          path: "build/*.ttf"
+          retention-days: 7
+...
