@@ -1,4 +1,4 @@
-IOSEVKA_VERSION = v33.2.7
+IOSEVKA_VERSION = v33.2.9
 
 INSTALL_DIR = ~/.local/share/fonts/iosevka-personal/
 
